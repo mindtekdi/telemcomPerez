@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Pérez | Internet Híbrido Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #2c3e50;
+            --accent: #27ae60;
+            --light: #f4f7f6;
+            --dark: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; color: var(--dark); line-height: 1.6; background-color: var(--white); }
+        
+        header { background: var(--secondary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+        
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?auto=format&fit=crop&w=1350&q=80'); 
+                height: 70vh; background-size: cover; background-position: center; display: flex; flex-direction: column; 
+                justify-content: center; align-items: center; color: white; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 2rem; }
+
+        .btn { background: var(--primary); color: white; padding: 14px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; display: inline-block; }
+        .btn:hover { background: #004494; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 10px; }
+        .section-title div { width: 80px; height: 4px; background: var(--primary); margin: 0 auto; }
+
+        /* Cobertura Section */
+        .coverage { padding: 80px 5%; background: var(--white); }
+        .coverage-container { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .coverage-text { flex: 1; min-width: 300px; }
+        .coverage-image { flex: 1; min-width: 300px; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+        .coverage-image img { width: 100%; display: block; filter: grayscale(20%); }
+
+        .pricing { padding: 80px 5%; background: var(--light); }
+        .plans-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .plan-card { background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; position: relative; border-top: 6px solid var(--primary); transition: 0.3s; }
+        .plan-card:hover { transform: translateY(-10px); }
+        .plan-card.featured { border-top-color: var(--accent); }
+        .plan-price { font-size: 3rem; font-weight: bold; color: var(--primary); margin: 20px 0; }
+        .plan-price span { font-size: 1rem; color: #777; }
+        .plan-features { list-style: none; padding: 0; margin: 25px 0; text-align: left; }
+        .plan-features li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; }
+        .plan-features li::before { content: '✓'; color: var(--accent); margin-right: 10px; font-weight: bold; }
+
+        footer { background: var(--secondary); color: white; text-align: center; padding: 60px 5% 20px; }
+        .footer-info { margin-bottom: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .coverage-container { flex-direction: column-reverse; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TELECOM PÉREZ</div>
+        <nav>
+            <a href="#planes" style="color:white; text-decoration:none; margin-right:20px;">Planes</a>
+            <a href="#cobertura" style="color:white; text-decoration:none; margin-right:20px;">Cobertura</a>
+            <a href="https://wa.me/522283657230" class="btn" style="padding: 10px 20px;">Contratar</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Internet Real donde estés</h1>
+        <p>Expertos en conectividad híbrida para Xalapa, Jilotepec y Naolinco. Velocidad estable por Fibra y Microondas.</p>
+        <a href="#planes" class="btn">Ver Planes y Precios</a>
+    </section>
+
+    <section class="coverage" id="cobertura">
+        <div class="section-title">
+            <h2>Nuestra Cobertura</h2>
+            <div></div>
+        </div>
+        <div class="coverage-container">
+            <div class="coverage-image">
+                <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=Mapa+de+Red+Telecom+Pérez" alt="Mapa de Cobertura Telecom Pérez">
+                <p style="text-align:center; padding:10px; background:#eee; margin:0; font-size:0.8rem;">Mapa técnico: Enlaces Xalapa - Dos Pocitos - Cumbre de Ojonotal</p>
+            </div>
+            <div class="coverage-text">
+                <h3>Llegamos a donde otros no pueden</h3>
+                <p>Nuestra infraestructura está diseñada para superar los retos geográficos de Veracruz. Mediante nuestro backbone de microondas **MikroTik** y distribución de última milla por **Fibra Óptica**, garantizamos servicio en:</p>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Xalapa:</strong> Nodo central y gestión.</li>
+                    <li><strong>Dos Pocitos:</strong> Cobertura inalámbrica y fibra.</li>
+                    <li><strong>Cumbre de Ojonotal y Mesa de Guadalupe:</strong> Conexión de alta montaña.</li>
+                </ul>
+                <p>¿No ves tu localidad? Contáctanos, nuestra red se expande constantemente hacia Acatlán y Tepetlán.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="planes">
+        <div class="section-title">
+            <h2>Planes Flexibles</h2>
+            <div></div>
+        </div>
+        <div class="plans-container">
+            <div class="plan-card">
+                <h3>Plan Básico</h3>
+                <div class="plan-price">$300<span>/mes</span></div>
+                <ul class="plan-features">
+                    <li>8 Mbps Bajada / 5 Mbps Subida</li>
+                    <li>Navegación y Redes Sociales</li>
+                    <li>Tecnología Híbrida</li>
+                    <li>Soporte Técnico Local</li>
+                </ul>
+                <button onclick="order('Básico')" class="btn">Contratar</button>
+            </div>
+
+            <div class="plan-card featured">
+                <div style="position:absolute; top:10px; right:10px; background:var(--accent); color:white; padding:2px 10px; border-radius:15px; font-size:0.7rem;">MÁS POPULAR</div>
+                <h3>Plan Hogar</h3>
+                <div class="plan-price">$400<span>/mes</span></div>
+                <ul class="plan-features">
+                    <li>10 Mbps Bajada / 8 Mbps Subida</li>
+                    <li>Streaming y Videojuegos</li>
+                    <li>Fibra Óptica / Microondas</li>
+                    <li>Instalación Profesional</li>
+                </ul>
+                <button onclick="order('Hogar')" class="btn" style="background:var(--accent)">Contratar</button>
+            </div>
+
+            <div class="plan-card">
+                <h3>Plan Pro Simétrico</h3>
+                <div class="plan-price">$650<span>/mes</span></div>
+                <ul class="plan-features">
+                    <li><strong>20 Mbps Bajada / 20 Mbps Subida</strong></li>
+                    <li>Ideal para Home Office y Negocios</li>
+                    <li>Prioridad de Tráfico</li>
+                    <li>Máxima Estabilidad Fibra</li>
+                </ul>
+                <button onclick="order('Pro')" class="btn">Contratar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="footer-info">
+            <div>
+                <h4>Ubicación</h4>
+                <p>Xalapa, Veracruz</p>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>Tel: 228 365 7230</p>
+                <p>Email: contacto@telecomperez.com</p>
+            </div>
+            <div>
+                <h4>Horario</h4>
+                <p>Lun - Vie: 9am - 6pm</p>
+            </div>
+        </div>
+        <p style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            <small>&copy; 2026 Telecom Pérez. Facturación directa vía SAT. Registro IFT en proceso.</small>
+        </p>
+    </footer>
+
+    <script>
+        function order(plan) {
+            const phone = "522283657230";
+            const message = encodeURIComponent(`Hola Telecom Pérez, vi su página web y me interesa contratar el ${plan}. ¿Tienen cobertura en mi zona?`);
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
